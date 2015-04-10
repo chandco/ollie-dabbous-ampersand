@@ -1,0 +1,1 @@
+requirejs.config({baseUrl:requirebase,shim:{"vendor/modernizr":{exports:"Modernizr"}}}),define("main",function(){});
