@@ -953,14 +953,23 @@ h6:first-of-type {
   min-height: 400px;
   background: #cccccc;
 }
+.magic-container {
+  padding-top: 2em;
+  perspective: 1500px;
+  transform: rotate(20deg);
+}
 .magic-container .magic:first-of-type {
-  transform: translateY(-10%);
+  transform: translateZ(0) rotateY(-45deg);
+  transform-origin: 100% 50%;
   background: #808080;
 }
 .magic-container .magic {
   min-height: 300px;
+  padding: 2em;
   color: white;
-  background: #e6e6e6;
+  background: #999999;
+  transform: translateZ(0) rotateY(45deg);
+  transform-origin: 0 50%;
 }
 #first-page {
   background: #eee;

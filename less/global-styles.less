@@ -41,15 +41,24 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .magic-container {
-	
+	padding-top: 2em;
+	perspective: 1500px;
+	transform: rotate(20deg);
 	.magic:first-of-type {
-		transform:translateY(-10%);
+		
+		transform: translateZ(0) rotateY(-45deg);
+		transform-origin: 100% 50%;
+		
 		background: lighten(black, 50%);
 	}
 
 	.magic {
 		min-height: 300px;
+		padding: 2em;
 		color: white;
-		background: lighten(black, 90%);
+		background: lighten(black, 60%);
+
+		transform: translateZ(0) rotateY(45deg);
+		transform-origin: 0 50%;
 	}
 }

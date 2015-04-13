@@ -26,7 +26,6 @@ var run = require('gulp-run');
 var build_require = require('./node-build.js');
 
 
-var htmlreplace = require('gulp-html-replace');
 
 gulp.task('default', ['compile-css', 'rjs'], function () {
 
