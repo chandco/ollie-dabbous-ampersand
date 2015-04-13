@@ -13,31 +13,24 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         
-       
+       <link rel='stylesheet' href='css/main.css'>
+       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-
-       <!-- inject:header.html -->
-
-        <!-- endinject -->
-
-
-        Hello
-
-        <h1>Ollie</h1>
-
-        <!-- build:sidebar -->
-
-        <!-- endbuild -->
+        
+        @@include('header.html')
 
         
 
+        @@include('middle.html');
 
+        
+
+        @@include('footer.html')
 
         <script>
             requirebase = 'js/';

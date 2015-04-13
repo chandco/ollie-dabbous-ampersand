@@ -16,7 +16,7 @@ var gulp = require('gulp'),
                   cmq = require('gulp-combine-media-queries');
 
 
-var tap = require('gulp-tap');
+
 
     var penthouse = require('penthouse');
     var fs = require('fs');
@@ -33,10 +33,12 @@ gulp.task('default', ['compile-css', 'rjs'], function () {
 
     browserSync({
             server: './',
-            files: "./css/*.css"
+            files: "css/*.css"
         });
     
-    gulp.watch('./css/**/*.less', ['compile-css']);
+    gulp.watch('./less/**/*.less', ['compile-css']);
+
+    gulp.watch(['./partials/**/*.*', './build/*.html'], ['build-html', browserSync.reload]);
 
     // gulp.watch('./js/*.js', ['javascript', browserSync.reload]);
 
@@ -54,22 +56,27 @@ gulp.task('rjs', function() {
 
 });
 
-var inject = require('gulp-inject');
 
+
+
+var fileinclude = require('gulp-file-include');
+var markdown = require('markdown');
 
 gulp.task('build-html', function() {
 
-   gulp.src('./build/*.html')
-  .pipe(inject(gulp.src(['html/*.html']), {
-    starttag: '<!-- inject:*:{ext}} -->',
-    transform: function (filePath, file) {
-      // return file contents as string 
+    
+    gulp.src('./build/*.html')
+    
 
-      console.log(file);
-      return file.contents.toString('utf8')
-    }
-  }))
-  .pipe(gulp.dest('./'));
+    .pipe( fileinclude({
+        prefix: '@@',
+        basepath: './partials/',
+        filters: {
+            markdown: markdown.parse
+        }
+    }))
+
+    .pipe(gulp.dest('./'));
 
 
 });
@@ -78,12 +85,7 @@ gulp.task('build-html', function() {
 
 gulp.task('compile-css', function () {
 	gulp.src('./less/main.less')
-    .pipe(tap(function (file,t) {
-            console.log(path.basename(file.path));
-            // Do something with the file name
-        }))
                 .pipe(plumber())
-
 				.pipe(sourcemaps.init())
 			    .pipe(less())
 			    //.pipe(autoprefixer())

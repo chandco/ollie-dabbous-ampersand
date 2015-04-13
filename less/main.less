@@ -1,19 +1,9 @@
+@import "mixins";
 @import "normalize";
 @import "boilerplate";
 @import "gridlover";
 @import "gridlover-application"; // this applies the variables set above.
 
 @import "cols";
-
-body {
-	background: url('http://bgfons.com/upload/iron_texture637.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-}
-
-#container {
-	background: fade(white, 50%);
-	width: 50%;
-	margin: auto;
-	position: relative;
-}
+@import "global-styles"; // body, fonts etc
+@import "section-first"; //might be all we need
