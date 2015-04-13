@@ -903,19 +903,19 @@ form > div {
   }
 }
 .cols .col-50 {
-  width: 48.93333333%;
+  width: 50%;
 }
 .cols .col-100 {
   width: 100%;
 }
 .cols .col-25 {
-  width: 23.93333333%;
+  width: 25%;
 }
 .cols .col-33 {
-  width: 31.93333333%;
+  width: 33%;
 }
 .cols .col-66 {
-  width: 64.93333333%;
+  width: 66%;
 }
 hr {
   width: 100%;
@@ -948,6 +948,19 @@ h4:first-of-type,
 h5:first-of-type,
 h6:first-of-type {
   margin-top: 0;
+}
+.blocks {
+  min-height: 400px;
+  background: #cccccc;
+}
+.magic-container .magic:first-of-type {
+  transform: translateY(-10%);
+  background: #808080;
+}
+.magic-container .magic {
+  min-height: 300px;
+  color: white;
+  background: #e6e6e6;
 }
 #first-page {
   background: #eee;
