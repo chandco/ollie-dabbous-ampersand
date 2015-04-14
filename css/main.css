@@ -1,6 +1,13 @@
 .max-central {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+.max-central-half {
+  width: 100%;
+  max-width: 700px;
   margin: auto;
   position: relative;
   display: block;
@@ -760,34 +767,34 @@ textarea {
   }
 }
 body {
-  font-size: 0.9375em;
-  line-height: 2.13333333em;
+  font-size: 0.8125em;
+  line-height: 1.76923077em;
   margin: 0 auto;
   padding-bottom: 100px;
 }
 h1 {
-  font-size: 3.2em;
-  line-height: 1.33333333em;
-  margin-top: 1.33333333em;
-  margin-bottom: 0.66666667em;
+  font-size: 1.92307692em;
+  line-height: 1.84em;
+  margin-top: 1.84em;
+  margin-bottom: 0.92em;
 }
 h2 {
-  font-size: 2.2em;
-  line-height: 1.93939394em;
-  margin-top: 1.93939394em;
-  margin-bottom: 0.96969697em;
+  font-size: 1.53846154em;
+  line-height: 1.15em;
+  margin-top: 2.3em;
+  margin-bottom: 1.15em;
 }
 h3 {
-  font-size: 1.46666667em;
-  line-height: 1.45454545em;
-  margin-top: 1.45454545em;
-  margin-bottom: 1.45454545em;
+  font-size: 1.23076923em;
+  line-height: 1.4375em;
+  margin-top: 1.4375em;
+  margin-bottom: 1.4375em;
 }
 h4 {
   font-size: 1em;
-  line-height: 2.13333333em;
-  margin-top: 2.13333333em;
-  margin-bottom: 2.13333333em;
+  line-height: 1.76923077em;
+  margin-top: 1.76923077em;
+  margin-bottom: 1.76923077em;
 }
 p,
 ul,
@@ -827,9 +834,9 @@ sub {
   top: 0.4em;
 }
 blockquote {
-  line-height: 1.49333333em;
+  line-height: 1.23846154em;
   font-style: italic;
-  padding-left: 2.13333333em;
+  padding-left: 1.76923077em;
   border-left: 3px solid rgba(0, 0, 0, 0.2);
   max-width: 80%;
   position: relative;
@@ -851,7 +858,7 @@ ol li:before {
 }
 label {
   display: block;
-  margin: 2.13333333em 0;
+  margin: 1.76923077em 0;
 }
 input,
 select {
@@ -880,7 +887,7 @@ form > div {
   max-width: 40%;
   height: auto;
   float: left;
-  margin: 0 2.13333333em 2.13333333em 0;
+  margin: 0 1.76923077em 1.76923077em 0;
 }
 .cols {
   display: flex;
@@ -891,7 +898,7 @@ form > div {
 }
 .cols > *[class^='col-'] {
   display: block;
-  margin: 0 0 2.13333333em 0;
+  margin: 0 0 1.76923077em 0;
   padding: 0;
 }
 .cols > *[class^='col-'] *:first-of-type {
@@ -919,7 +926,7 @@ form > div {
 }
 hr {
   width: 100%;
-  margin: 2.13333333em 0;
+  margin: 1.76923077em 0;
   border: none;
   border-bottom: 1px solid #ddd;
 }
@@ -933,13 +940,31 @@ html *:after,
 html *:before {
   box-sizing: inherit;
 }
+body {
+  background-color: #fefefe;
+  background-color: #121212;
+  background: url(../img/light-slate-background.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top center;
+  font-family: 'Raleway', sans-serif;
+}
 .full-height {
-  min-height: 800px;
-  min-height: 90vh;
+  min-height: 200px;
+  min-height: 20vh;
+  padding: 4em 0;
 }
 .section {
   width: 100%;
   margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
 }
 h1:first-of-type,
 h2:first-of-type,
@@ -949,6 +974,9 @@ h5:first-of-type,
 h6:first-of-type {
   margin-top: 0;
 }
+.centred {
+  text-align: center;
+}
 .blocks {
   min-height: 400px;
   background: #cccccc;
@@ -956,24 +984,65 @@ h6:first-of-type {
 .magic-container {
   padding-top: 2em;
   perspective: 1500px;
-  transform: rotate(20deg);
-}
-.magic-container .magic:first-of-type {
-  transform: translateZ(0) rotateY(-45deg);
-  transform-origin: 100% 50%;
-  background: #808080;
+  transition: transform .3s ease;
 }
 .magic-container .magic {
+  transition: transform .3s ease;
   min-height: 300px;
   padding: 2em;
   color: white;
   background: #999999;
-  transform: translateZ(0) rotateY(45deg);
   transform-origin: 0 50%;
 }
+.magic-container .magic:first-of-type {
+  background: #808080;
+  transform-origin: 100% 50%;
+}
 #first-page {
-  background: #eee;
-  padding-top: 5em;
+  background-color: #121212;
+  background: url(../img/header-background.jpg);
+  background-size: auto 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 4em 0;
+  position: relative;
+}
+#first-page:after {
+  display: block;
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+  left: 0;
+  bottom: 5px;
+}
+#masthead {
+  width: 30%;
+  max-width: 300px;
+}
+#masthead img {
+  width: 100%;
+  height: auto;
+}
+#masthead hr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+#masthead #amp-partner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#masthead #amp-partner svg {
+  width: 80%;
+  height: 100%;
+}
+#masthead #amp-partner text {
+  fill: url(#p-stripes);
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

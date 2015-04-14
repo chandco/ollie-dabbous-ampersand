@@ -1,6 +1,66 @@
 
 
 #first-page {
-	background: #eee;
-	padding-top: 5em;
+	background-color: #121212;
+	background: url(../img/header-background.jpg);
+	background-size: auto 100%;
+	height: auto;
+
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+
+	padding: 4em 0;
+
+	position: relative;
+
+	&:after {
+		display: block;
+		position: absolute;
+		content: "";
+		border-bottom: 1px solid fade(white, 40%);
+		width: 100%;
+		left: 0;
+		bottom: 5px;
+	}
 }
+
+
+#masthead {
+
+	width: 30%;
+	max-width: 300px;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+	hr {
+		border-bottom: 1px solid fade(white, 40%);
+	}
+
+	#amp-partner {
+		
+		display: block;
+		width: 100%;
+		height: auto;
+
+		svg {
+			width: 80%;
+			height: 100%;
+		}
+
+		text { 
+
+	      fill: url(#p-stripes);
+	      font-family: 'Raleway', sans-serif;
+	      font-size: 12px;
+	      text-align: center;
+	      }
+	}
+
+
+}
+
+
+

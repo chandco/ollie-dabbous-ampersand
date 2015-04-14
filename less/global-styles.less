@@ -12,13 +12,23 @@ html {
 }
 body {
 	
+	background-color: #fefefe;
+	background-color: #121212;
+	background: url(../img/light-slate-background.jpg);
+	background-size: auto;
+	
+	background-repeat: repeat;
+	background-position: top center;
+	
+	font-family: 'Raleway', sans-serif;
 	
 }
 
 
 .full-height {
-	min-height: 800px;
-	min-height: 90vh; // not quite fold full
+	min-height: 200px;
+	min-height: 20vh; // not quite fold full
+	padding: 4em 0;
 }
 
 
@@ -29,9 +39,14 @@ body {
 
 
 h1,h2,h3,h4,h5,h6 {
+	text-transform: uppercase;
 	&:first-of-type {
 		margin-top: 0;
 	}
+}
+
+.centred {
+	text-align: center;
 }
 
 
@@ -43,22 +58,23 @@ h1,h2,h3,h4,h5,h6 {
 .magic-container {
 	padding-top: 2em;
 	perspective: 1500px;
-	transform: rotate(20deg);
-	.magic:first-of-type {
-		
-		transform: translateZ(0) rotateY(-45deg);
-		transform-origin: 100% 50%;
-		
-		background: lighten(black, 50%);
-	}
-
+	transition: transform .3s ease;
+	
 	.magic {
+		transition: transform .3s ease;
 		min-height: 300px;
 		padding: 2em;
 		color: white;
 		background: lighten(black, 60%);
-
-		transform: translateZ(0) rotateY(45deg);
 		transform-origin: 0 50%;
 	}
+
+	.magic:first-of-type {
+		background: lighten(black, 50%);
+		transform-origin: 100% 50%;
+	}
+
+	
+
+	
 }
