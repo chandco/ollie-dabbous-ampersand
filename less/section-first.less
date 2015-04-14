@@ -28,8 +28,8 @@
 
 #masthead {
 
-	width: 30%;
-	max-width: 300px;
+	width: 40%;
+	max-width: 400px;
 
 	img {
 		width: 100%;
@@ -50,13 +50,12 @@
 			height: 100%;
 		}
 
-		text { 
+	
+	}
 
-	      fill: url(#p-stripes);
-	      font-family: 'Raleway', sans-serif;
-	      font-size: 12px;
-	      text-align: center;
-	      }
+	@media screen and (max-width: 600px) {
+		max-width: 80%;
+		width: 80%;
 	}
 
 
@@ -64,3 +63,38 @@
 
 
 
+.footer {
+	font-size: 0.8em;
+}
+
+.footer-svgs {
+	width: 30%;
+	display: block;
+	position: relative;
+	margin: auto;
+	max-width: 200px;
+
+	margin-bottom: 2em;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+	hr {
+		border-bottom: 1px solid fade(black, 40%);
+	}
+
+	#amp-partner {
+		
+		display: block;
+		width: 100%;
+		height: auto;
+
+		svg {
+			width: 80%;
+			height: 100%;
+		}
+
+	
+	}
+}

@@ -50,29 +50,143 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.blocks {
-	min-height: 400px;
-	background: lighten(black, 80%);
-}
+
 
 .magic-container {
-	padding-top: 2em;
-	perspective: 1500px;
+	padding: 0;
+	margin: 0;
+
+
+
 	transition: transform .3s ease;
+	z-index: 1;
+	position: relative;
+
+	&:after {
+			display: block;
+			position: absolute;
+			content: "";
+			border-top: 1px solid fade(white, 40%);
+			border-bottom: 1px solid fade(white, 40%);
+			width: 100%;
+			left: 0;
+			top: 5px;
+			right: 0;
+			bottom: 5px;
+	}
 	
 	.magic {
 		transition: transform .3s ease;
 		min-height: 300px;
 		padding: 2em;
 		color: white;
-		background: lighten(black, 60%);
-		transform-origin: 0 50%;
+		border-right:  3px solid #eee;
+		z-index: 1;
+
+		&:last-of-type {
+			border-right: none;
+		}
+
+		h3 {
+			font-weight: normal;
+		}
+
+
+		@media screen and (max-width: 600px) {
+			border-right: none !important;
+			border-left: none !important;
+
+			border-bottom: 3px solid #eee;
+
+			min-height: 0;
+			height: auto;
+		}
+	
 	}
 
-	.magic:first-of-type {
-		background: lighten(black, 50%);
-		transform-origin: 100% 50%;
+
+	border-bottom: 3px solid #eee;
+
+	@media screen and (max-width: 600px) {
+		border-bottom: none;
+
 	}
+
+	&.half-blocks .magic {
+		@media screen and (min-width: 768px) {
+			min-width: 400px;	
+		}
+		
+		max-width: 100%;
+
+
+	}
+
+	.left-border {
+		border-left:  3px solid #eee;
+	}
+
+	
+	.photo {
+		position: relative;
+		.img-container {
+			width: 100%;
+			height: 100%;
+
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			overflow: hidden;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: auto;
+				height: 100%;
+				@media screen and (max-width: 600px) {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+
+
+
+		}
+
+		@media screen and (max-width: 480px) {
+				
+				padding: 0;
+
+				.img-container {
+					position: static;
+					img {
+						position: relative;
+					}
+				}
+				
+
+			}
+	}
+
+	
+
+	.dark-slate {
+
+	}
+
+	background-color: #121212;
+	background: url(../img/header-background.jpg);
+	background-size: auto 100%;
+	height: auto;
+
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: cover;
 
 	
 
