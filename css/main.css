@@ -769,10 +769,9 @@ textarea {
   }
 }
 body {
-  font-size: 0.8125em;
+  font-size: 1em;
   line-height: 1.76923077em;
   margin: 0 auto;
-  padding-bottom: 100px;
 }
 h1 {
   font-size: 1.92307692em;
@@ -971,6 +970,14 @@ body {
   background-position: top center;
   font-family: 'Raleway', sans-serif;
 }
+a:link {
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: #666;
+}
 .full-height {
   min-height: 200px;
   min-height: 20vh;
@@ -1083,14 +1090,18 @@ h6:first-of-type {
 .magic-container .photo .img-container img {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   width: auto;
   height: 100%;
+  min-width: 100%;
+  transform: translateX(-50%);
 }
 @media screen and (max-width: 600px) {
   .magic-container .photo .img-container img {
     width: 100%;
     height: auto;
+    left: 0;
+    transform: translateX(0);
   }
 }
 @media screen and (max-width: 480px) {
@@ -1103,6 +1114,9 @@ h6:first-of-type {
   .magic-container .photo .img-container img {
     position: relative;
   }
+}
+.last-p {
+  margin-bottom: 0;
 }
 #first-page {
   background-color: #121212;
@@ -1176,6 +1190,115 @@ h6:first-of-type {
 .footer-svgs #amp-partner svg {
   width: 80%;
   height: 100%;
+}
+#menu-panel {
+  background: rgba(34, 34, 34, 0.5);
+  color: #111;
+}
+#menu-panel .cols {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+#menu-panel .cols.menu-row {
+  margin-top: 80px;
+}
+#menu-panel h2 {
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+#menu-panel .subheading {
+  text-align: center;
+  margin-top: 0;
+}
+#menu-panel hr {
+  width: 80%;
+  margin: auto;
+  border: none;
+  border-bottom: 1px solid #111;
+  max-width: 960px;
+}
+.cols .menu-item {
+  width: 25%;
+}
+@media screen and (max-width: 800px) {
+  .cols .menu-item {
+    width: 50%;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cols .menu-item {
+    width: 100%;
+  }
+}
+.menu-item {
+  position: relative;
+  min-height: 200px;
+}
+.menu-item:before {
+  content: "";
+  border-top: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+}
+.menu-item:nth-of-type(even):before {
+  border-bottom: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  top: 11px;
+  transform: rotate(180deg);
+}
+.menu-item:after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  bottom: -30px;
+  left: -5%;
+  right: -2%;
+  opacity: 0.15;
+  background-image: url(../img/smudge.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.menu-item h2 {
+  text-align: center;
+  position: relative;
+}
+.menu-item h2:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 75%;
+  top: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.menu-item h2:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  left: 75%;
+  top: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.menu-item ul {
+  list-style-type: none;
+  padding: 0;
+  padding: 30px;
+}
+.menu-item ul li {
+  padding: 0;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 1.4em;
 }
 
 /*# sourceMappingURL=maps/main.css.map */
