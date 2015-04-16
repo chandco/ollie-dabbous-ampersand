@@ -94,6 +94,8 @@ h1,h2,h3,h4,h5,h6 {
 		border-right:  3px solid #eee;
 		z-index: 1;
 
+
+
 		&:last-of-type {
 			border-right: none;
 		}
@@ -124,11 +126,17 @@ h1,h2,h3,h4,h5,h6 {
 	}
 
 	&.half-blocks .magic {
+
+		min-height: 300px;
 		@media screen and (min-width: 768px) {
 			min-width: 400px;	
 		}
 		
 		max-width: 100%;
+
+		@media screen and (max-width: 480px) {
+			min-height: 0;
+		}
 
 
 	}

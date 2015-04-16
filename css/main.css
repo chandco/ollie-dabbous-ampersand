@@ -1062,11 +1062,17 @@ h6:first-of-type {
   }
 }
 .magic-container.half-blocks .magic {
+  min-height: 300px;
   max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   .magic-container.half-blocks .magic {
     min-width: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .magic-container.half-blocks .magic {
+    min-height: 0;
   }
 }
 .magic-container .left-border {
@@ -1249,12 +1255,6 @@ h6:first-of-type {
   left: 10px;
   bottom: 10px;
 }
-.menu-item:nth-of-type(even):before {
-  border-bottom: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-  top: 11px;
-  transform: rotate(180deg);
-}
 .menu-item:after {
   content: "";
   position: absolute;
@@ -1266,6 +1266,9 @@ h6:first-of-type {
   background-image: url(../img/smudge.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+.menu-item:nth-of-type(even):after {
+  transform: rotate(180deg);
 }
 .menu-item h2 {
   text-align: center;

@@ -188,15 +188,7 @@
 		bottom: @offset;
 	}
 
-	&:nth-of-type(even) {
 
-		&:before {
-			border-bottom: none;
-			border-top: @border;
-			top: @offset + 1px;
-			transform:rotate(180deg);
-		}
-	}
 
 	&:after {
 		content: "";
@@ -206,9 +198,17 @@
 		left: -5%;
 		right: -2%;	
 		opacity: 0.15;
-			background-image: url(../img/smudge.svg);
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
+		background-image: url(../img/smudge.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+	&:nth-of-type(even) {
+
+		
+		&:after {
+			transform:rotate(180deg);
+		}
 	}
 
 	h2 {
