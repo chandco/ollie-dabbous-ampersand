@@ -95,6 +95,7 @@ require(['vendor/velocity', 'components/arrayForEach'], function(Velocity) {
 	
 	var fadeNext = function(element, index) {
 
+		console.log('fired');
 		if (element[index + 1]) {
 			var nextIndex = index + 1;
 		} else {
@@ -103,9 +104,8 @@ require(['vendor/velocity', 'components/arrayForEach'], function(Velocity) {
 
 		Velocity( element, {
 			opacity:0, 
-				perspective: "500px",
-				rotateX: "45deg",
-
+			perspective: "500px",
+			rotateX: "45deg",
 			
 		}, { duration: 1500 });
 
@@ -113,15 +113,18 @@ require(['vendor/velocity', 'components/arrayForEach'], function(Velocity) {
 		setTimeout( function() {
 			Velocity( element[index], {
 			opacity:1, 
+
 				perspective: 0,
 				rotateX: 0,
 
 			complete:function() {
 			
-				timer = setTimeout( fadeNext(element, nextIndex), 10000 ); // next slide
+				timer = setTimeout( function() {
+				fadeNext(element, nextIndex);
+				}, 8000 ); // next slide
 			}
 		}, { duration: 1500 }); // fade in time
-		}, 1000); // delay from fadein
+		}, 2000); // delay from fadein
 
 
 
@@ -130,7 +133,9 @@ require(['vendor/velocity', 'components/arrayForEach'], function(Velocity) {
 		
 	}
 
-	fadeNext(quotes, 1);
+	setTimeout( function() {
+		fadeNext(quotes, 1);
+	}, 3000 );
 
 	
 });

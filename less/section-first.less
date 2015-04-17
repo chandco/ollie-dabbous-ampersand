@@ -19,6 +19,8 @@
 	height: @mast-height;
 	z-index: 10;
 
+	-webkit-backface-visibility: hidden;
+
 
 	&:after {
 		display: block;
@@ -153,6 +155,7 @@
 #menu-panel {
 	background: fade(#222, 50%);
 	color: #111;
+	padding: 3em;
 
 	.cols {
 		max-width: 1200px;

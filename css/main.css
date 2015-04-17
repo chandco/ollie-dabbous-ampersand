@@ -940,6 +940,9 @@ form > div {
 .cols .col-30 {
   width: 30%;
 }
+.cols .col-auto {
+  width: auto;
+}
 @media screen and (max-width: 768px) {
   .cols.half-blocks .col-25 {
     width: 50%;
@@ -1075,8 +1078,17 @@ h6:first-of-type {
     min-height: 0;
   }
 }
+.magic-container.half-blocks .magic.no-min {
+  min-width: 0;
+}
+.magic-container.half-blocks .magic.no-min img {
+  min-width: 0;
+}
 .magic-container .left-border {
   border-left: 3px solid #eee;
+}
+.magic-container .right-border {
+  border-right: 3px solid #eee;
 }
 .magic-container .photo {
   position: relative;
@@ -1138,6 +1150,7 @@ h6:first-of-type {
   top: 0;
   height: 200px;
   z-index: 10;
+  -webkit-backface-visibility: hidden;
 }
 #first-page:after {
   display: block;
@@ -1232,6 +1245,7 @@ h6:first-of-type {
 #menu-panel {
   background: rgba(34, 34, 34, 0.5);
   color: #111;
+  padding: 3em;
 }
 #menu-panel .cols {
   max-width: 1200px;
@@ -1346,7 +1360,8 @@ html {
   transform-origin: 0px 600px;
 }
 #middle {
-  min-height: 18vh;
+  height: 18vh;
+  padding: 0;
   position: relative;
 }
 #middle .max-central {
@@ -1363,17 +1378,22 @@ html {
   width: 100%;
   padding: 0;
   margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 .quotes ul li {
   opacity: 0;
   padding: 0;
   position: absolute;
-  top: 0;
+  perspective: 500px;
+  transform: rotateX(0);
   margin: auto;
   text-align: center;
   width: 100%;
   left: 0;
   right: 0;
+  top: 25%;
 }
 .quotes ul li:first-of-type {
   opacity: 1;
