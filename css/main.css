@@ -1345,14 +1345,28 @@ html {
   transform: translateY(30px) perspective(1200px) rotateX(45deg);
   transform-origin: 0px 600px;
 }
+#middle {
+  min-height: 18vh;
+  position: relative;
+}
+#middle .max-central {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+}
 .quotes ul {
   position: relative;
-  height: 40px;
   list-style-type: none;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .quotes ul li {
   opacity: 0;
+  padding: 0;
   position: absolute;
   top: 0;
   margin: auto;

@@ -80,44 +80,9 @@ require(['vendor/steady'], function(Steady) {
 	}
 
 
-	var trigger_value = 400;
-	var ste = new Steady({
-      throttle: 100,
-      handler: fn,
-      conditions: {
-      	"min-top" : 0
-      }
-    });
-    
-    function addMyClass(el, classname) {
-	  var classString = el.className; // returns the string of all the classes for myDiv
-	  var newClass = classString.concat(" " + classname); // Adds the class "main__section" to the string (notice the leading space)
-	  el.className = newClass; // sets className to the new string
-	}
+	
  
- 	var header = document.querySelector('#first-page');
-
-    
-    function fn(values, done) {
-      
-      	
-
-      	if (values.top > trigger_value && values.top < (trigger_value * 2)) {
-      		if ( !hasClass(header, 'above-fold') ) {
-      			addClass(header, 'above-fold');
-      		}
-      	} else if (values.top > (trigger_value * 2)) {
-      		addClass(header, 'after-fold');
-      	} else {
-      		removeClass(header, 'after-fold');
-      		removeClass(header, 'above-fold');
-      	}
-      	
-      	
-      
-      
-      done();
-    }
+ 	
 });
 
 
@@ -127,6 +92,7 @@ require(['vendor/velocity', 'components/arrayForEach'], function(Velocity) {
 	var quotes = document.querySelectorAll('.quotes li');
 
 	var timer;
+	
 	var fadeNext = function(element, index) {
 
 		if (element[index + 1]) {
