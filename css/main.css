@@ -981,7 +981,7 @@ a:hover {
 .full-height {
   min-height: 200px;
   min-height: 20vh;
-  padding: 4em 0;
+  padding: 1em 0;
 }
 .section {
   width: 100%;
@@ -1131,9 +1131,13 @@ h6:first-of-type {
   height: auto;
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
-  padding: 4em 0;
-  position: relative;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  height: 200px;
+  z-index: 10;
 }
 #first-page:after {
   display: block;
@@ -1144,31 +1148,59 @@ h6:first-of-type {
   left: 0;
   bottom: 5px;
 }
-#masthead {
+#first-page #masthead {
   width: 40%;
   max-width: 400px;
+  will-change: transform;
+  transform: scale(1, 1) translateY(-50%);
+  transition: transform, .5s ease;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  transform-origin: center top;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-#masthead img {
+#first-page #masthead img {
   width: 100%;
-  height: auto;
+  height: 46%;
 }
-#masthead hr {
+#first-page #masthead hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  width: 60%;
+  margin: 4% auto;
 }
-#masthead #amp-partner {
+#first-page #masthead #amp-partner {
   display: block;
   width: 100%;
   height: auto;
 }
-#masthead #amp-partner svg {
+#first-page #masthead #amp-partner svg {
   width: 80%;
   height: 100%;
 }
 @media screen and (max-width: 600px) {
-  #masthead {
+  #first-page #masthead {
     max-width: 80%;
     width: 80%;
   }
+}
+#first-page.above-fold {
+  position: fixed;
+  height: 100px;
+  transform: translateY(-100%);
+}
+#first-page.above-fold #masthead {
+  transform: scale(0.5, 0.5) translateY(-50%);
+}
+#first-page.after-fold {
+  transition: transform 1s ease;
+  transform: translateY(0%);
+}
+#middle {
+  position: relative;
+  margin-top: 200px;
 }
 .footer {
   font-size: 0.8em;
@@ -1302,6 +1334,45 @@ h6:first-of-type {
   text-align: center;
   line-height: 1;
   margin-bottom: 1.4em;
+}
+html {
+  opacity: 0;
+}
+.magic {
+  opacity: 0;
+  perspective: 500px;
+  perspective-origin: 66% 50%;
+  transform: translateY(30px) perspective(1200px) rotateX(45deg);
+  transform-origin: 0px 600px;
+}
+.quotes ul {
+  position: relative;
+  height: 40px;
+  list-style-type: none;
+  width: 100%;
+}
+.quotes ul li {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.quotes ul li:first-of-type {
+  opacity: 1;
+}
+.quotes ul li h4 {
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  font-size: 0.5;
+  font-weight: normal;
+  margin: 0;
+}
+.quotes ul li h3 {
+  margin: .2em 0 0 0;
 }
 
 /*# sourceMappingURL=maps/main.css.map */
