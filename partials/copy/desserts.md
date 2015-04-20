@@ -1,5 +1,6 @@
 ## Desserts
 
-- Bubblegum Sundae
-- Barley flour soaked in red tea, tahitian vanilla cream
-- Truffled cheese on toast
+- Banana and custard pie
+- Strained yoghurt with raspberries, pearl barley and lavender
+- Light sponge soaked in red tea; Tahitian vanilla cream
+

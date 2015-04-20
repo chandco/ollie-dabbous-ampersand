@@ -10,13 +10,10 @@ requirejs.config({
 
 });
 
-require(['vendor/velocity', 'components/arrayForEach'], function( Velocity ) {
-	Velocity(document.querySelector('html'), { opacity: 1 });
 
+require(['vendor/modernizr'], function (Modernizr) {
 
-	
 });
-
 
 
 // require(['components/css']);

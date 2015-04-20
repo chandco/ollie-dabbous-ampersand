@@ -1,125 +1,158 @@
-html {
-	opacity: 0;
-}
 
 
 
 
 
-
-.magic {
-	
-	transform-style: preserve3d;
-	perspective: 500px;
- 	 perspective-origin: 0% 50%;
-
-	
-
-	-webkit-animation-name: swingdoor;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-delay: 2s;
-
-
-	transform-origin: 50% 0px;
-}
-
-@-webkit-keyframes swingdoor {
-    from {
-    	opacity: 0;
-    	
-
-		
-	}
-    to {
-    	opacity: 1;
-    
-
-	}
-}
-
-
-#first-page {
-	-webkit-animation-name: curtain;
-	-webkit-animation-duration: 2s;
-	
-}
-
-@-webkit-keyframes curtain {
+@keyframes fadein {
 	from {
-		transform:translateY(-100%);
+		opacity: 0;
 	}
 
 	to {
-		transform:translateY(0);	
+		opacity: 1;
 	}
+}
+
+
+@keyframes fadein-delayed {
+	from {
+		opacity: 0;
+	}
+
+	75% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+@keyframes curtain {
+	from {
+		transform:translateY(0%);
+	}
+
+	to {
+		transform:translateY(-70%);	
+	}
+}
+
+@keyframes slidein-left {
+	from {
+		transform: translateX(-20%);
+		opacity:0;
+	}
+
+	to {
+		transform: translateX(0%);
+		opacity:1;
+	}
+}
+
+@keyframes slidein-right {
+	from {
+		transform: translateX(20%);
+		opacity:0;
+	}
+
+	to {
+		transform: translateX(0%);
+		opacity:1;
+	}
+}
+
+
+html {
+	animation-timing-function: ease;
+	animation-name: fadein;
+	animation-duration: .5s;
+}
+
+
+
+@keyframes fadein-stages {
+	from {
+		opacity: 0;
+		transform:translateY( -200% );
+	}
+
+	50% {
+		opacity: 1;
+		transform:translateY( -200% );
+	}
+
+
+	to {
+		transform:translateY( 0% );
+		opacity: 1;
+	}
+}
+
+#first-page {
+	animation-timing-function: ease;
+	animation-name: curtain;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-fill-mode: backwards;
+
+}
+
+#first-page #masthead {
+	animation-timing-function: ease;
+	animation-delay: 1s;
+	animation-name: fadein-stages;
+	animation-duration: 6s;
+	animation-fill-mode: backwards;
+	transform: none;
+	top: 75%;
 }
 
 #middle {
-	height: 18vh;
-	padding: 0;
-	position:relative;
-	.max-central {
-		position:absolute;
-		top: 10%;
-		width: 100%;
-		bottom: 10%;
-		left: 0;
-		right: 0;
-	}
+	animation-timing-function: ease;
+	animation-delay: 3s;
+	animation-name: fadein;
+	animation-duration: 1s;
+	animation-fill-mode: backwards;
+}
+
+.magic-container {
+	animation-timing-function: ease;
+	animation-delay: 4s;
+	animation-name: fadein;
+	animation-duration: 1s;
+	animation-fill-mode: backwards;
 
 }
-.quotes {
-	
 
-
+.magic {
+	animation-timing-function: ease;
+	animation-delay: 4.5s;
+	animation-name: slidein-left;
+	animation-duration: 1s;
+	animation-fill-mode: backwards;
 }
-.quotes ul {
-	position: relative;
+
+.magic:last-of-type {
+	animation-timing-function: ease;
+	animation-delay: 5s;
+	animation-name: slidein-right;
+
+	animation-duration: 1s;
+	animation-fill-mode: backwards;
+}
+
+
+
+#first-page {
+	z-index: 9999;
+	height: 100vh;
+	background-size: 100% 100%;
+	transform:translateY(-70%);	
 	
-	list-style-type: none;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-
-	li {
-		opacity: 0;
-		padding: 0;
-		position: absolute;
-		
-		perspective:500px;
-		transform:rotateX(0);
-		margin: auto;
-		text-align: center;
-		width: 100%;
-		left: 0;
-		right: 0;
-		top: 25%;
-
-
-		&:first-of-type {
-			opacity: 1;
-		}
-
-		h4 {
-			border-bottom: 1px solid #000;
-			display: inline-block;
-			font-size: 0.5;
-			font-weight: normal;
-			margin: 0;
-		}
-
-		h3 {
-			margin: .2em 0 0 0;
-			font-family: 'Raleway', sans-serif;
-			font-weight: bold;
-
-
-		}
-
-
-
-	}
 }

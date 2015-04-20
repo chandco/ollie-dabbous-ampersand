@@ -9,7 +9,7 @@
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 100% auto;
-	background-attachment: fixed;
+	
 
 	padding: 0;
 
@@ -22,15 +22,7 @@
 	-webkit-backface-visibility: hidden;
 
 
-	&:after {
-		display: block;
-		position: absolute;
-		content: "";
-		border-bottom: 1px solid fade(white, 40%);
-		width: 100%;
-		left: 0;
-		bottom: 5px;
-	}
+	border-bottom: @global-border;
 
 
 	#masthead {
@@ -42,7 +34,7 @@
 		transform:scale(1,1) translateY(-50%);
 		transition: transform, .5s ease;
 
-		height: @mast-height * 0.9;
+		height: 20vh;
 
 		position: absolute;
 		top: 50%;
@@ -107,45 +99,90 @@
 
 #middle {
 	position: relative;
-	margin-top:  @mast-height;
+	margin-top:  30vh;
+
+	border-bottom: @global-border;
 }
 
 
 
-.footer {
-	font-size: 0.8em;
+
+
+
+#middle {
+	height: 18vh;
+	padding: 0;
+	position:relative;
+	.max-central {
+		position:absolute;
+		top: 10%;
+		width: 100%;
+		bottom: 10%;
+		left: 0;
+		right: 0;
+	}
+
 }
 
-.footer-svgs {
-	width: 30%;
-	display: block;
+
+
+
+.quotes {
+	
+
+
+}
+.quotes ul {
 	position: relative;
-	margin: auto;
-	max-width: 200px;
+	
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
 
-	margin-bottom: 2em;
-
-	img {
-		width: 100%;
-		height: auto;
-	}
-	hr {
-		border-bottom: 1px solid fade(black, 40%);
-	}
-
-	#amp-partner {
+	li {
+		opacity: 0;
+		padding: 0;
+		position: absolute;
 		
-		display: block;
+		perspective:500px;
+		transform:rotateX(0);
+		margin: auto;
+		text-align: center;
 		width: 100%;
-		height: auto;
+		left: 0;
+		right: 0;
+		top: 25%;
 
-		svg {
-			width: 80%;
-			height: 100%;
+
+		&:first-of-type {
+			opacity: 1;
 		}
 
-	
+		h4 {
+			border-bottom: 1px solid #000;
+			display: inline-block;
+			font-size: 0.5;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		h3 {
+			margin: .2em 0 0 0;
+			font-family: 'Raleway', sans-serif;
+			font-weight: bold;
+
+
+		}
+
+
+
 	}
 }
 
-
+#training .magic { 
+	min-height: 392px; // specifically because of the photo;
+}

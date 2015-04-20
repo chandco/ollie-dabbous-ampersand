@@ -1,5 +1,7 @@
 ## Mains
 
-- Barbecue grain-fed beef, toasted rye, warm horseradish buttermilk
-- Octopus with cassava and white miso
-- Seasonal vegetables, basil and chrysanthemum in a light Spenwood broth
+- 7 year aged beef fillet, roast onion, warm Stilton buttermilk
+- Poached cod with warm tartare sauce, samphire and new potatoes
+- Toasted cauliflower with chestnuts, capers and lovage
+
+
