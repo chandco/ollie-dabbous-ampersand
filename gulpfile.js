@@ -88,7 +88,7 @@ gulp.task('compile-css', function () {
                 .pipe(plumber())
 				.pipe(sourcemaps.init())
 			    .pipe(less())
-			    //.pipe(autoprefixer())
+			    .pipe(autoprefixer())
                 //.pipe(uglifycss())
 			    .pipe(sourcemaps.write('./maps'))
 			    .pipe(gulp.dest('./css/'));

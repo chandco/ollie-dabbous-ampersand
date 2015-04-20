@@ -1,4 +1,26 @@
 
+
+.headingfont() {
+	font-family: 'AgencyFBRegular';
+}
+
+.bodyfont() {
+	font-family: 'Raleway', sans-serif;
+}
+@font-face {
+    font-family: 'AgencyFBRegular';
+    src: url('agencyfb-regular-webfont.eot');
+    src: url('agencyfb-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('agencyfb-regular-webfont.woff') format('woff'),
+         url('agencyfb-regular-webfont.ttf') format('truetype'),
+         url('agencyfb-regular-webfont.svg#AgencyFBRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 html {
 	box-sizing: border-box;
 
@@ -55,6 +77,8 @@ a:hover {
 
 h1,h2,h3,h4,h5,h6 {
 	text-transform: uppercase;
+	font-family: 'AgencyFBRegular';
+	font-weight: normal;
 	&:first-of-type {
 		margin-top: 0;
 	}

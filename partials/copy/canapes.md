@@ -1,5 +1,5 @@
 ## Canapés
 
-- Peas & Mint
-- Burrata with fennel pollen and confit tomato
-- Barbecued runner beans, savoury pine nut praline, sheep's milk curds and marigold shoots
+- Gem lettuce, lemon balkm and pickled rose petals
+- Smoked butter croquettes with wild mushrooms and thyme
+- Potted shrimp on toast with coastal herbs
