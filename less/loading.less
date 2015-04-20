@@ -1,0 +1,123 @@
+html {
+	opacity: 0;
+}
+
+
+
+
+
+
+.magic {
+	
+	transform-style: preserve3d;
+	perspective: 500px;
+ 	 perspective-origin: 0% 50%;
+
+	
+
+	-webkit-animation-name: swingdoor;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+
+
+	transform-origin: 50% 0px;
+}
+
+@-webkit-keyframes swingdoor {
+    from {
+    	opacity: 0;
+    	
+
+		
+	}
+    to {
+    	opacity: 1;
+    
+
+	}
+}
+
+
+#first-page {
+	-webkit-animation-name: curtain;
+	-webkit-animation-duration: 2s;
+	
+}
+
+@-webkit-keyframes curtain {
+	from {
+		transform:translateY(-100%);
+	}
+
+	to {
+		transform:translateY(0);	
+	}
+}
+
+#middle {
+	height: 18vh;
+	padding: 0;
+	position:relative;
+	.max-central {
+		position:absolute;
+		top: 10%;
+		width: 100%;
+		bottom: 10%;
+		left: 0;
+		right: 0;
+	}
+
+}
+.quotes {
+	
+
+
+}
+.quotes ul {
+	position: relative;
+	
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+
+	li {
+		opacity: 0;
+		padding: 0;
+		position: absolute;
+		
+		perspective:500px;
+		transform:rotateX(0);
+		margin: auto;
+		text-align: center;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: 25%;
+
+
+		&:first-of-type {
+			opacity: 1;
+		}
+
+		h4 {
+			border-bottom: 1px solid #000;
+			display: inline-block;
+			font-size: 0.5;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		h3 {
+			margin: .2em 0 0 0;
+
+
+		}
+
+
+
+	}
+}

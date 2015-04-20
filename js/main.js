@@ -13,43 +13,8 @@ requirejs.config({
 require(['vendor/velocity', 'components/arrayForEach'], function( Velocity ) {
 	Velocity(document.querySelector('html'), { opacity: 1 });
 
-	var magic_blocks = document.querySelectorAll('.magic');
-
-
-	function getRandomInt(min, max) {
-	  return Math.floor(Math.random() * (max - min)) + min;
-	}
 
 	
-
-
-	[].forEach.call(magic_blocks, function(element) {
- 
-
-		var delay = getRandomInt(500,1600);
-		
-		var thisEl = element;
-		setTimeout( function( ) {
-
-/*transform:
-		translateY(30px)
-		perspective( 500px ) rotateX(45deg);*/
-			
-			Velocity(thisEl, {
-				opacity:1, 
-				translateY: "0",
-				
-				rotateX: 0,
-
-
-				complete: function() {
-					
-				}
-			}, {duration: 1400});
-		
-		} , delay);
-
-	});
 });
 
 
