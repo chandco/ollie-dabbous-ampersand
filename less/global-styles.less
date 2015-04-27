@@ -162,14 +162,20 @@ div.content.magic {
 	&.half-blocks .magic {
 
 		min-height: 300px;
-		@media screen and (min-width: 768px) {
-			min-width: 400px;	
+		@media screen and (max-width: 830px) {
+			min-width: 50%;	
+
+			&.left-border {
+				border-left: none;
+			}
 		}
 		
 		max-width: 100%;
 
 		@media screen and (max-width: 480px) {
 			min-height: 0;
+
+			
 		}
 
 		&.no-min {
@@ -193,9 +199,23 @@ div.content.magic {
 		border-right:  @global-border !important;
 	}
 
+	.content.col-30 {
+		@media screen and (max-width: 830px) {
+			width: 60%;
+		}
+	}
+
+	
+
+
 	
 	.photo {
 		position: relative;
+
+
+		@media screen and (max-width: 600px) {
+			min-height: 300px !important;
+		}
 		.img-container {
 			width: 100%;
 			height: 100%;
@@ -208,6 +228,10 @@ div.content.magic {
 			bottom: 0;
 			margin: auto;
 			overflow: hidden;
+
+			background-position: center center;
+			background-size: auto 100%;
+			background-size: cover;
 			img {
 				position: absolute;
 				top: 0;
@@ -227,14 +251,33 @@ div.content.magic {
 
 
 
+
+
 		}
+
+		&.col-30 {
+			@media screen and (max-width: 830px) {
+				
+				
+
+				&:first-of-type {
+					display: none;
+				}
+
+
+			}
+		}
+
+
 
 		@media screen and (max-width: 480px) {
 				
 				padding: 0;
 
 				.img-container {
-					position: static;
+
+					
+
 					img {
 						position: relative;
 					}

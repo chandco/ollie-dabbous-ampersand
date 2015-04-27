@@ -1,5 +1,5 @@
 ## Starters
 
-- Scallop tartare with eucalyptus
-- Burrata with tamarillo, basil and fennel pollen
+- Cornish mackerel with iced eucalyptus
+- Burrata with tamarillo, basil & fennel pollen
 - Cured goose with fenugreek

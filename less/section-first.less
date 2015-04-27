@@ -186,3 +186,95 @@
 #training .magic { 
 	min-height: 392px; // specifically because of the photo;
 }
+
+
+
+.ollie-quote {
+	background: url('../img/dark-slate.jpg');
+	padding: 3em 0;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+
+	h4 {
+		  text-align: center;
+		  position: relative;
+		  max-width: 900px;
+		  margin: auto;
+		  width: auto;
+		  display: inline-block;
+		  font-size: 1.4em;
+		  margin-bottom: 0.5em;
+		  line-height: 1.4em;
+		  padding: 0 2em;
+		  text-shadow: 0px -1px 1px fade(white, 20%);
+		&:after {
+			  content: "";
+			  position: absolute;
+			  left: -20%;
+			  right: -20%;
+			  bottom: 0;
+			  border-bottom: 1px solid #242424;
+		}
+	}
+
+	p {
+		text-align: center;
+		position: relative;
+		max-width: 900px;
+		margin: auto;
+		padding: 0 2em;
+
+		text-shadow: 0px -1px 1px fade(white, 20%);
+	}
+}
+
+.magic-container .content.training-text {
+	
+	width: 30%;
+	display: flex;
+
+	
+
+	&.magic {
+		margin: 0;
+	}
+
+	@media screen and (max-width: 830px) {
+		width:50%;
+	}
+	@media screen and (max-width: 600px) {
+		width: 100% !important;
+		min-width: 0;
+		
+	}
+}
+
+.ollie-portrait {
+	width: auto;
+	min-width: 322px;
+
+	img {
+		height:100%; 
+		width:auto;
+	}
+	@media screen and (max-width: 830px) {
+		width: 30%;
+		min-width: 0;
+	}
+
+	@media screen and (max-width: 600px) {
+		width: 100%;
+		min-width: 0;
+
+
+		img {
+			width: 100% !important;
+			height: auto !important;
+		}
+
+		border-bottom: @global-border;
+		
+	}
+}

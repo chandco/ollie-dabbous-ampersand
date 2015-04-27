@@ -101,9 +101,9 @@ gulp.task('dist-css', function () {
                 //.pipe(sourcemaps.init())
                 .pipe(less())
                 .pipe(autoprefixer())
-                .pipe(cmq({
-                  log: true
-                }))
+               // .pipe(cmq({
+             //     log: true
+             //   }))
                 .pipe(uglifycss())
                 .pipe(gulp.dest('./css/'));
 

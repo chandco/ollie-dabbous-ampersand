@@ -1,3 +1,18 @@
+#first-page {
+	background-size: auto 100%;
+}
+
+@media screen and (max-width: 800px) {
+	.quotes ul {
+		font-size: 0.8em;
+	}
+
+	.photo {
+		min-height: 200px;
+	}
+}
+
+
 
 
 
@@ -94,65 +109,75 @@ html {
 	}
 }
 
-#first-page {
-	animation-timing-function: ease;
-	animation-name: curtain;
-	animation-duration: 3s;
-	animation-delay: 3s;
-	animation-fill-mode: backwards;
+@media screen and (min-width: 1000px) {
+
+
+	#first-page {
+		animation-timing-function: ease;
+		animation-name: curtain;
+		animation-duration: 3s;
+		animation-delay: 3s;
+		animation-fill-mode: backwards;
+
+	}
+
+	#first-page #masthead {
+		animation-timing-function: ease;
+		animation-delay: 1s;
+		animation-name: fadein-stages;
+		animation-duration: 6s;
+		animation-fill-mode: backwards;
+		transform: none;
+		top: 75%;
+	}
+
+	#middle {
+		animation-timing-function: ease;
+		animation-delay: 3s;
+		animation-name: fadein;
+		animation-duration: 1s;
+		animation-fill-mode: backwards;
+	}
+
+	.magic-container {
+		animation-timing-function: ease;
+		animation-delay: 4s;
+		animation-name: fadein;
+		animation-duration: 1s;
+		animation-fill-mode: backwards;
+
+	}
+
+	.magic {
+		animation-timing-function: ease;
+		animation-delay: 4.5s;
+		animation-name: slidein-left;
+		animation-duration: 1s;
+		animation-fill-mode: backwards;
+	}
+
+	.magic:last-of-type {
+		animation-timing-function: ease;
+		animation-delay: 5s;
+		animation-name: slidein-right;
+
+		animation-duration: 1s;
+		animation-fill-mode: backwards;
+	}
+
+	#first-page {
+		z-index: 9999;
+		height: 100vh;
+		background-size: 100% 100%;
+		transform:translateY(-70%);	
+		
+	}
 
 }
 
-#first-page #masthead {
-	animation-timing-function: ease;
-	animation-delay: 1s;
-	animation-name: fadein-stages;
-	animation-duration: 6s;
-	animation-fill-mode: backwards;
-	transform: none;
-	top: 75%;
-}
-
-#middle {
-	animation-timing-function: ease;
-	animation-delay: 3s;
-	animation-name: fadein;
-	animation-duration: 1s;
-	animation-fill-mode: backwards;
-}
-
-.magic-container {
-	animation-timing-function: ease;
-	animation-delay: 4s;
-	animation-name: fadein;
-	animation-duration: 1s;
-	animation-fill-mode: backwards;
-
-}
-
-.magic {
-	animation-timing-function: ease;
-	animation-delay: 4.5s;
-	animation-name: slidein-left;
-	animation-duration: 1s;
-	animation-fill-mode: backwards;
-}
-
-.magic:last-of-type {
-	animation-timing-function: ease;
-	animation-delay: 5s;
-	animation-name: slidein-right;
-
-	animation-duration: 1s;
-	animation-fill-mode: backwards;
-}
 
 
 
-#first-page {
-	z-index: 9999;
-	height: 100vh;
-	background-size: 100% 100%;
-	transform:translateY(-70%);	
-	
-}
+
+
+
