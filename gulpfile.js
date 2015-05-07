@@ -32,8 +32,7 @@ gulp.task('default', ['compile-css', 'rjs'], function () {
 
     browserSync({
             proxy: 'dabbous.dev.chand.co',
-            files: "css/*.css",
-            port: 8080,
+            files: "css/*.css"
         });
     
     gulp.watch('./less/**/*.less', ['compile-css']);

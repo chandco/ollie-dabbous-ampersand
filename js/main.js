@@ -97,7 +97,10 @@ require(['vendor/velocity', 'components/arrayForEach'], function(Velocity) {
 
 	setTimeout( function() {
 		fadeNext(quotes, 1);
-	}, 3000 );
+	}, 10000 );
 
 	
 });
+
+
+

@@ -97,12 +97,7 @@
 }
 
 
-#middle {
-	position: relative;
-	margin-top:  30vh;
 
-	border-bottom: @global-border;
-}
 
 
 
@@ -113,6 +108,16 @@
 	height: 18vh;
 	padding: 0;
 	position:relative;
+	margin-top:  30vh;
+	border-bottom: @global-border;
+
+
+	@media screen and (max-width: 600px) {
+		height: 200px;
+		margin-top: 0;
+	}	
+
+
 	.max-central {
 		position:absolute;
 		top: 10%;
@@ -145,7 +150,7 @@
 
 	li {
 		opacity: 0;
-		padding: 0;
+		padding: 1em;
 		position: absolute;
 		
 		perspective:500px;
@@ -178,6 +183,9 @@
 
 		}
 
+		@media screen and (max-width: 600px) {
+			top: 13%;
+		}
 
 
 	}
@@ -216,6 +224,14 @@
 			  right: -20%;
 			  bottom: 0;
 			  border-bottom: 1px solid #242424;
+		}
+
+		@media screen and (max-width: 600px) {
+			width: auto;
+			&:after {
+				left: 0;
+				right: 0;
+			}
 		}
 	}
 
